@@ -1,3 +1,4 @@
+ifneq ($(TARGET_HAS_IPA_IN_DEVTREE), true)
 ifneq (,$(filter $(QCOM_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
 ifneq (, $(filter aarch64 arm arm64, $(TARGET_ARCH)))
 
@@ -22,3 +23,4 @@ include $(BUILD_SHARED_LIBRARY)
 
 endif # $(TARGET_ARCH)
 endif
+endif # $(TARGET_HAS_IPA_IN_DEVTREE)
